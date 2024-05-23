@@ -3,15 +3,36 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: paboonro <paboonro@student.42bangkok.co    +#+  +:+       +#+        */
+/*   By: paboonro <paboonro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/23 02:39:34 by paboonro          #+#    #+#             */
-/*   Updated: 2024/05/23 02:39:34 by paboonro         ###   ########.fr       */
+/*   Created: 2024/05/23 10:08:58 by paboonro          #+#    #+#             */
+/*   Updated: 2024/05/23 12:23:26 by paboonro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include <unistd.h>
 
-void ft_putnbr(int nb) 
-{ //mtfk int32_t
-	
+void	ft_putnbr(int nb)
+{
+	char	s;
+
+	if (nb == -2147483648)
+	{
+		write(1, "-2147483648", 11);
+	}
+	if (nb > 9)
+	{
+		ft_putnbr(nb / 10);
+		ft_putnbr(nb % 10);
+	}
+	else if (nb < 0)
+	{
+		write(1, "-", 1);
+		ft_putnbr(-nb);
+	}
+	else
+	{
+		s = nb + 48;
+		write(1, &s, 1);
+	}
 }

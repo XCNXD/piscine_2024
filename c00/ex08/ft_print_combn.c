@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_combn.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: paboonro <paboonro@student.42bangkok.co    +#+  +:+       +#+        */
+/*   By: paboonro <paboonro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/23 01:53:39 by paboonro          #+#    #+#             */
-/*   Updated: 2024/05/23 01:53:39 by paboonro         ###   ########.fr       */
+/*   Updated: 2024/05/23 10:07:47 by paboonro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include <unistd.h>
 
 void	recusive_n_number(int n, int i, int t, char*arr)
@@ -43,9 +44,4 @@ void	ft_print_combn(int n)
 	char	array[10];
 
 	recusive_n_number(n, 0, 0, array);
-}
-
-void	main(void)
-{
-	ft_print_combn(2);
 }

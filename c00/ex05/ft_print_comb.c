@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_comb.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: paboonro <paboonro@student.42bangkok.co    +#+  +:+       +#+        */
+/*   By: paboonro <paboonro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/22 23:20:35 by paboonro          #+#    #+#             */
-/*   Updated: 2024/05/22 23:20:35 by paboonro         ###   ########.fr       */
+/*   Created: 2024/05/23 09:30:44 by paboonro          #+#    #+#             */
+/*   Updated: 2024/05/23 09:30:46 by paboonro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include <unistd.h>
 
 void	write_abc(char a, char b, char c)

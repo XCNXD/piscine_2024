@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_comb2.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: paboonro <paboonro@student.42bangkok.co    +#+  +:+       +#+        */
+/*   By: paboonro <paboonro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/23 02:17:32 by paboonro          #+#    #+#             */
-/*   Updated: 2024/05/23 02:17:32 by paboonro         ###   ########.fr       */
+/*   Created: 2024/05/23 09:30:56 by paboonro          #+#    #+#             */
+/*   Updated: 2024/05/23 09:30:58 by paboonro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_reverse_alphabet.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: paboonro <paboonro@student.42bangkok.co    +#+  +:+       +#+        */
+/*   By: paboonro <paboonro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/22 22:54:53 by paboonro          #+#    #+#             */
-/*   Updated: 2024/05/22 22:54:53 by paboonro         ###   ########.fr       */
+/*   Created: 2024/05/23 09:29:15 by paboonro          #+#    #+#             */
+/*   Updated: 2024/05/23 09:29:37 by paboonro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include <unistd.h>
 
 void	ft_print_reverse_alphabet(void)
