@@ -1,26 +1,53 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strupcase.c                                     :+:      :+:    :+:   */
+/*   ft_strcapitalize.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: paboonro <paboonro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/28 14:26:52 by paboonro          #+#    #+#             */
-/*   Updated: 2024/05/28 15:21:19 by paboonro         ###   ########.fr       */
+/*   Created: 2024/05/28 14:28:02 by paboonro          #+#    #+#             */
+/*   Updated: 2024/05/28 15:23:45 by paboonro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strupcase(char *str)
+char	*ft_strlowcase(char *str)
 {
 	int	i;
 
 	i = 0;
 	while (str[i] != 0)
 	{
+		if (str[i] >= 'A' && str[i] <= 'Z')
+		{
+			str[i] += 32;
+		}
+		i++;
+	}
+	return (str);
+}
+
+char	*ft_strcapitalize(char *str)
+{
+	int		i;
+	int		j;
+
+	i = 0;
+	j = 1;
+	ft_strlowcase(str);
+	while (str[i] != 0)
+	{
 		if (str[i] >= 'a' && str[i] <= 'z')
 		{
-			str[i] -= 32;
+			if (j == 1)
+			{
+				str[i] -= 32;
+				j = 0;
+			}
 		}
+		else if (str[i] >= '0' && str[i] <= '9')
+			j = 0;
+		else
+			j = 1;
 		i++;
 	}
 	return (str);
