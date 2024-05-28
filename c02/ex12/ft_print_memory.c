@@ -6,9 +6,11 @@
 /*   By: paboonro <paboonro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 15:32:59 by paboonro          #+#    #+#             */
-/*   Updated: 2024/05/28 19:14:26 by paboonro         ###   ########.fr       */
+/*   Updated: 2024/05/28 19:39:03 by paboonro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <unistd.h>
 
 void	print_hex(void *cur_ad, char *number)
 {
@@ -49,24 +51,21 @@ void	deg_to_hex(char *buffer, int h, int t, int arr[])
 	}
 }
 
-char	*address_to_hex(unsigned int addr, char buffer[])
+char	*address_to_hex(void *addr, char buffer[])
 {
-	unsigned int	i;
+	unsigned long	i;
 	int				t;
-	int				h;
 	int				arr[16];
-	char			*radix;
 
-	radix = "0123456789abcdef";
 	t = 0;
-	i = addr;
+	i = (unsigned long)addr;
 	while (i / 16 != 0)
 	{
 		arr[t++] = i % 16;
 		i /= 16;
 	}
 	arr[t] = i;
-	deg_to_hex(buffer, h, t, arr);
+	deg_to_hex(buffer, 0, t, arr);
 	write(1, buffer, 16);
 	write(1, &": ", 2);
 	return (buffer);
@@ -78,7 +77,7 @@ void	ft_printmem_sub(void *s_adr, unsigned int s, char *c_a, char *c)
 	int		idx;
 
 	idx = 0;
-	address_to_hex((unsigned int)c_a, buffer);
+	address_to_hex((void *)c_a, buffer);
 	while (idx++ < 16)
 	{
 		print_hex(s_adr + s, c_a + idx - 1);
@@ -104,6 +103,7 @@ void	*ft_print_memory(void *addr, unsigned int size)
 	char	*c_a;
 	char	*c;
 
+	c = "";
 	if (size != 0)
 	{
 		c_a = (char *)addr;
