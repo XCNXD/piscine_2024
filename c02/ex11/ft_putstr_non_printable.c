@@ -23,7 +23,7 @@ void	ft_convert_and_write(char c)
 	char	c2;
 
 	ft_putc('\\');
-	c1 = c / 16 + 48;
+	c1 = "0123456789abcdef"[c / 16];
 	c2 = "0123456789abcdef"[c % 16];
 	ft_putc(c1);
 	ft_putc(c2);
