@@ -12,7 +12,7 @@
 
 #include <unistd.h>
 
-int	ft_putc(char s)
+void	ft_putc(char s)
 {
 	write(1, &s, 1);
 }
@@ -32,7 +32,6 @@ void	ft_convert_and_write(char c)
 void	ft_putstr_non_printable(char *str)
 {
 	int		i;
-	char	x;
 
 	i = 0;
 	while (str[i] != 0)
