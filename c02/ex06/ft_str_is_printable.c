@@ -6,7 +6,7 @@
 /*   By: paboonro <paboonro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 14:26:48 by paboonro          #+#    #+#             */
-/*   Updated: 2024/05/30 14:58:32 by paboonro         ###   ########.fr       */
+/*   Updated: 2024/05/30 17:25:26 by paboonro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_str_is_printable(char *str)
 	}
 	while (str[i] != 0)
 	{
-		if (str[i] < ' ' && str [i] > '~')
+		if (str[i] < ' ' || str [i] > '~')
 		{
 			return (0);
 		}
