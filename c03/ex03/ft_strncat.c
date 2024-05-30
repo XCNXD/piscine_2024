@@ -6,7 +6,7 @@
 /*   By: paboonro <paboonro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/30 11:59:24 by paboonro          #+#    #+#             */
-/*   Updated: 2024/05/30 11:59:24 by paboonro         ###   ########.fr       */
+/*   Updated: 2024/05/30 15:54:52 by paboonro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strncat(char *dest, char *src, unsigned int nb)
 	if (nb != 0)
 	{
 		while (dest[i] != 0)
-			len++;
+			i++;
 		while (j < nb && src[j] != 0)
 		{
 			dest[i + j] = src[j];
