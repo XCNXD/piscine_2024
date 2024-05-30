@@ -6,7 +6,7 @@
 /*   By: paboonro <paboonro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 14:26:48 by paboonro          #+#    #+#             */
-/*   Updated: 2024/05/30 13:45:27 by paboonro         ###   ########.fr       */
+/*   Updated: 2024/05/30 14:58:32 by paboonro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_str_is_printable(char *str)
 	i = 0;
 	if (str[i] == 0)
 	{
-		return (0);
+		return (1);
 	}
 	while (str[i] != 0)
 	{
