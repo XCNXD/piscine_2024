@@ -6,7 +6,7 @@
 /*   By: paboonro <paboonro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 14:48:52 by paboonro          #+#    #+#             */
-/*   Updated: 2024/05/28 15:20:34 by paboonro         ###   ########.fr       */
+/*   Updated: 2024/05/30 13:44:44 by paboonro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ void	ft_convert_and_write(char c)
 	char	c2;
 
 	ft_putc('\\');
-	c1 = "0123456789abcdef"[c / 16];
-	c2 = "0123456789abcdef"[c % 16];
+	c1 = "0123456789abcdef"[(unsigned char)c / 16];
+	c2 = "0123456789abcdef"[(unsigned char)c % 16];
 	ft_putc(c1);
 	ft_putc(c2);
 }

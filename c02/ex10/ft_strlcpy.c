@@ -6,13 +6,13 @@
 /*   By: paboonro <paboonro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 14:28:22 by paboonro          #+#    #+#             */
-/*   Updated: 2024/05/28 15:32:45 by paboonro         ###   ########.fr       */
+/*   Updated: 2024/05/30 13:45:00 by paboonro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int	strlen(char *a)
+unsigned int	ft_strlen(char *a)
 {
-	int	i;
+	unsigned int	i;
 
 	i = 0;
 	while (a[i] != 0)
@@ -28,7 +28,7 @@ unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 	unsigned int	len_source;
 
 	i = 0;
-	len_source = strlen(src);
+	len_source = ft_strlen(src);
 	if (size != 0)
 	{
 		while (src[i] != 0 && i < size - 1)

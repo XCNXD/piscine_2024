@@ -1,34 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: paboonro <paboonro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/30 11:59:17 by paboonro          #+#    #+#             */
-/*   Updated: 2024/05/30 11:59:17 by paboonro         ###   ########.fr       */
+/*   Created: 2024/05/23 10:08:58 by paboonro          #+#    #+#             */
+/*   Updated: 2024/05/30 12:13:42 by paboonro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
+#include <unistd.h>
+
+void	ft_putnbr(int nb)
 {
-	unsigned int	i;
+	char	s;
 
-	i = 0;
-	if (n == 0)
+	if (nb == -2147483648)
 	{
-		return (0);
+		write(1, "-2147483648", 11);
 	}
-	while (i < n && (s1[i] == s2[i] && s1[i] != 0 && s2[i] != 0))
+	if (nb > 9)
 	{
-		i++;
+		ft_putnbr(nb / 10);
+		ft_putnbr(nb % 10);
 	}
-	return (s1[i] - s2[i]);
+	else if (nb < 0)
+	{
+		write(1, "-", 1);
+		ft_putnbr(-nb);
+	}
+	else
+	{
+		s = nb + 48;
+		write(1, &s, 1);
+	}
 }
-
-// #include <stdio.h>
-// #include <string.h>
-// int main(int argc, char **argv)
-// {
-// 	printf("%d", ft_strncmp(argv[1], argv[2], atoi(argv[3])));
-// }
