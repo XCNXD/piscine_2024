@@ -1,34 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
+/*   ft_fibonacci.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: paboonro <paboonro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/02 11:55:31 by paboonro          #+#    #+#             */
-/*   Updated: 2024/06/04 15:14:07 by paboonro         ###   ########.fr       */
+/*   Created: 2024/06/04 13:09:28 by paboonro          #+#    #+#             */
+/*   Updated: 2024/06/04 13:09:29 by paboonro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_iterative_factorial(int nb)
+int	recusive(int n)
 {
-	int	i;
-	int	num;
-
-	i = 0;
-	num = 1;
-	if (nb == 0)
-	{
-		return (1);
-	}
-	else if (nb < 0)
+	if (n == 0)
 	{
 		return (0);
 	}
-	while (nb != 0)
+	else if (n == 1 || n == 2)
 	{
-		num *= (nb);
-		nb--;
+		return (1);
 	}
-	return (num);
+	return (recusive(n - 1) + recusive(n - 2));
 }
+
+int	ft_fibonacci(int index)
+{
+	if (index < 0)
+	{
+		return (-1);
+	}
+	return (recusive(index));
+}
+
+// int	main(void)
+// {
+// 	printf("%i", ft_fibonacci(10));
+// }
