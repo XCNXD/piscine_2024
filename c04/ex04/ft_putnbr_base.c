@@ -6,7 +6,7 @@
 /*   By: paboonro <paboonro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/31 18:21:06 by paboonro          #+#    #+#             */
-/*   Updated: 2024/06/04 16:02:59 by paboonro         ###   ########.fr       */
+/*   Updated: 2024/06/04 16:54:26 by paboonro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,10 @@ void	printbase(int *nb, char *base, int len_base)
 	j = 0;
 	while (i >= 0)
 	{
+		if (nb[i] < 0)
+		{
+			nb[i] *= -1;
+		}
 		s[j] = base[nb[i]];
 		i--;
 		j++;
@@ -88,7 +92,7 @@ void	ft_putnbr_base(int nbr, char *base)
 	i = 0;
 	if (check_base_error(base) == 1)
 	{
-		if (nbr < 0)
+		if (nbr < 0 )
 		{
 			write(1, "-", 1);
 			nbr *= -1;
@@ -107,6 +111,9 @@ void	ft_putnbr_base(int nbr, char *base)
 }
 
 // int		main(void)
+// {
+// 	ft_putnbr_base(-2147483648, "0123456789ABCDEF");
+// }
 // {
 // 	ft_putnbr_base(-12, "01");
 // 	printf("\n");
