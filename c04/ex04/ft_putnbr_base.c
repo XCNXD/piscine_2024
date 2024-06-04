@@ -6,7 +6,7 @@
 /*   By: paboonro <paboonro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/31 18:21:06 by paboonro          #+#    #+#             */
-/*   Updated: 2024/05/31 18:21:06 by paboonro         ###   ########.fr       */
+/*   Updated: 2024/06/04 16:02:59 by paboonro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,11 @@ void	print_str(char *str, int len)
 {
 	int	i;
 
-	i = len;
-	while (i + 1 != 0)
+	i = 0;
+	while (i != len + 1)
 	{
 		write(1, str + i, 1);
-		i--;
+		i++;
 	}
 }
 
@@ -106,6 +106,13 @@ void	ft_putnbr_base(int nbr, char *base)
 	}
 }
 
-// int main(){
-// 	ft_putnbr_base(-65535, "0123456789abcdef");
+// int		main(void)
+// {
+// 	ft_putnbr_base(-12, "01");
+// 	printf("\n");
+// 	ft_putnbr_base(40, "poneyvif");
+// 	printf("\n");
+// 	ft_putnbr_base(894867, "0123456789");
+// 	printf("\n");
+// 	ft_putnbr_base(53, "0123456789abcdef");
 // }
