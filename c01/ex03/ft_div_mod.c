@@ -6,12 +6,15 @@
 /*   By: paboonro <paboonro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/25 04:13:33 by paboonro          #+#    #+#             */
-/*   Updated: 2024/05/25 04:15:01 by paboonro         ###   ########.fr       */
+/*   Updated: 2024/05/27 12:46:47 by paboonro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_div_mod(int a, int b, int *div, int *mod)
 {
-	*div = a / b;
-	*mod = a % b;
+	if (b != 0)
+	{
+		*div = a / b;
+		*mod = a % b;
+	}
 }

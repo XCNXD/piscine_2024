@@ -6,7 +6,7 @@
 /*   By: paboonro <paboonro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/25 04:23:06 by paboonro          #+#    #+#             */
-/*   Updated: 2024/05/25 04:24:38 by paboonro         ###   ########.fr       */
+/*   Updated: 2024/05/27 12:49:07 by paboonro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ void	ft_putstr(char *str)
 	i = 0;
 	while (str[i] != 0)
 	{
-		write(1, str[i], 1);
+		write(1, &str[i], 1);
+		i++;
 	}
 }
