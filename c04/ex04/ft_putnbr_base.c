@@ -6,7 +6,7 @@
 /*   By: paboonro <paboonro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/31 18:21:06 by paboonro          #+#    #+#             */
-/*   Updated: 2024/06/04 16:54:26 by paboonro         ###   ########.fr       */
+/*   Updated: 2024/06/06 13:20:30 by paboonro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,7 +92,7 @@ void	ft_putnbr_base(int nbr, char *base)
 	i = 0;
 	if (check_base_error(base) == 1)
 	{
-		if (nbr < 0 )
+		if (nbr < 0)
 		{
 			write(1, "-", 1);
 			nbr *= -1;
