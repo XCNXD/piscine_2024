@@ -6,13 +6,12 @@
 /*   By: paboonro <paboonro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 13:43:46 by paboonro          #+#    #+#             */
-/*   Updated: 2024/06/04 13:43:46 by paboonro         ###   ########.fr       */
+/*   Updated: 2024/06/12 11:50:56 by paboonro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_sqrt(int nb)
 {
-	int	i;
 	int	num;
 
 	if (nb <= 0)
